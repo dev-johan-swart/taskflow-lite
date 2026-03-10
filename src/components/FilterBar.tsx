@@ -14,7 +14,12 @@ export const FilterBar: React.FC<FilterBarProps> = ({ currentFilter, setFilter }
         <button
           key={f}
           onClick={() => setFilter(f)}
-          style={{ fontWeight: f === currentFilter ? "bold" : "normal" }}
+          style={{
+            fontWeight: f === currentFilter ? "bold" : "normal",
+            marginRight: "8px",
+            padding: "4px 10px",
+            cursor: "pointer"
+          }}
         >
           {f.charAt(0).toUpperCase() + f.slice(1)}
         </button>

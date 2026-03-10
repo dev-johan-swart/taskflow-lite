@@ -32,6 +32,12 @@ Core Features
 - Delete a task
 - Toggle task completion
 - Filter tasks (All / Active / Completed)
+- Clear completed tasks
+- Tasks sorted by newest
+- LocalStorage persistence
+- Custom React hook architecture
+- Unit tested with Vitest
+- CI tested with GitHub Actions
 
 Out of Scope
 - Authentication

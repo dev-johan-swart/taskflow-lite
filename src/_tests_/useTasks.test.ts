@@ -1,6 +1,11 @@
+import { beforeEach } from "vitest";
 import { describe, it, expect } from "vitest";
 import { renderHook, act } from "@testing-library/react";
 import { useTasks } from "../hooks/useTasks";
+
+beforeEach(() => {
+  localStorage.clear();
+});
 
 describe("useTasks hook", () => {
   it("adds a task", () => {
