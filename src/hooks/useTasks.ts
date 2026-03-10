@@ -45,14 +45,20 @@ export function useTasks(initialTasks: Task[] = []) {
     setTasks((prev) => prev.filter((task) => task.id !== id));
   };
 
+  const clearCompleted = () => {
+    setTasks(prev => prev.filter(task => !task.completed));
+  };
+
   const filteredTasks = useMemo(() => {
     switch (filter) {
       case "Active":
         return tasks.filter((t) => !t.completed);
       case "Completed":
         return tasks.filter((t) => t.completed);
-      default:
-        return tasks;
+        default:
+          return [...tasks].sort(
+            (a, b) => b.createdAt.getTime() - a.createdAt.getTime()
+          );
     }
   }, [tasks, filter]);
 
@@ -61,6 +67,7 @@ export function useTasks(initialTasks: Task[] = []) {
     addTask,
     toggleTask,
     deleteTask,
+    clearCompleted,
     filter,
     setFilter,
   };
