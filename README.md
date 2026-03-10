@@ -1,5 +1,7 @@
 TaskFlow Lite
 
+[![CI](https://github.com/dev-johan-swart/taskflow-lite/actions/workflows/ci.yml/badge.svg)](https://github.com/dev-johan-swart/taskflow-lite/actions/workflows/ci.yml)
+
 A structured task management application built with React, TypeScript, and Vite.
 
 📌 Objective
