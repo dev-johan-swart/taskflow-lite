@@ -29,7 +29,7 @@ The application follows a responsibility-driven component structure:
 
 📋 Feature Specification
 
-Core Features
+v1.0 — Core Features
 - Add a task
 - Delete a task
 - Toggle task completion
@@ -40,6 +40,15 @@ Core Features
 - Custom React hook architecture
 - Unit tested with Vitest
 - CI tested with GitHub Actions
+
+v1.1 — Feature Expansion ✨
+
+- Task Priorities — assign High, Medium, or Low priority with colour-coded badges
+- Due Dates — set a due date per task with automatic overdue detection and visual highlighting
+- Categories / Tags — organise tasks into custom categories with dynamic filter buttons
+- Combined Filtering — status filter and category filter work together simultaneously
+- Expanded Test Coverage — new unit and integration tests covering all v1.1 features
+- Backward Compatible — all new fields are optional; existing localStorage data loads without migration
 
 Out of Scope
 - Authentication
@@ -54,6 +63,7 @@ Explicit scope boundaries prevent feature creep and keep the implementation focu
 - useMemo for filtered task computation
 - useCallback for stable handler references
 - React.memo for list item optimization
+- Derived categories list computed from task data — no extra state
 - Stable keys for mapped lists
 - Avoidance of unnecessary re-renders
 
@@ -73,6 +83,7 @@ If extended, the architecture would evolve to include:
 - Persistent storage layer
 - Backend API integration
 - Pagination or virtualization for large datasets
+- Drag-and-drop task reordering
 
 🧠 Engineering Principles Applied
 
@@ -80,9 +91,13 @@ If extended, the architecture would evolve to include:
 - Separation of Concerns
 - Predictable State Management
 - Explicit Scope Definition
+- Backward Compatible Type Extension
 - Clean and Maintainable Code
 
 ## Documentation
 
 - [Specification](./docs/specification.md)
 - [Development Approach](./docs/development-approach.md)
+
+🔗 Live Demo
+https://thunderous-yeot-60f90f.netlify.app/
